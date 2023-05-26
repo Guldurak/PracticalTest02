@@ -11,7 +11,17 @@ public class ServerThread extends Thread {
 
     private ServerSocket serverSocket = null;
 
+    private final HashMap<String, Calculus> data;
 
+    public synchronized void setData(String operator_1, String operator_2, Calculus calculus) {
+        this.data.put(operator_1, calculus);
+        this.data.put(operator_2, calculus);
+
+    }
+
+    public synchronized HashMap<String, Calculus> getData() {
+        return data;
+    }
     public ServerThread(int port) {
         try {
             this.serverSocket = new ServerSocket(port);
@@ -21,6 +31,7 @@ public class ServerThread extends Thread {
                 ioException.printStackTrace();
             }
         }
+        this.data = new HashMap<>();
     }
 
     public ServerSocket getServerSocket() {
