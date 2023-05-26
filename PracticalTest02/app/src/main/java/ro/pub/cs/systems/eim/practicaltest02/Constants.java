@@ -15,6 +15,7 @@ public class Constants {
     final public static String PRESSURE = "pressure";
     final public static String HUMIDITY = "humidity";
     final public static String ALL = "all";
+
     final public static String EMPTY_STRING = "";
     final public static String TEMP = "temp";
     final public static String SPEED = "speed";
@@ -22,4 +23,7 @@ public class Constants {
     final public static String WEATHER = "weather";
     final public static String MAIN = "main";
     final public static String WIND = "wind";
+
+    final public static String ADD = "add";
+    final public static String MUL = "mul";
 }
