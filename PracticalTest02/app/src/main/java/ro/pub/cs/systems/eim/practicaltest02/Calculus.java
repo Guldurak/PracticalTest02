@@ -9,7 +9,7 @@ public class Calculus {
     private final Integer operator_1;
     private final Integer operator_2;
 
-    public Calculus(Integer add, Integer mul, Integer operator_1, Integer operator_2) {
+    public Calculus(Integer operator_1, Integer operator_2) {
         //this.add = add;
         //this.mul = mul;
         this.operator_1 = operator_1;

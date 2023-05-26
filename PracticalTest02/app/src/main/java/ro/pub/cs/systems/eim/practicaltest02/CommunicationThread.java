@@ -63,7 +63,7 @@ public class CommunicationThread extends Thread {
                 return;
             }
 
-            Calculus calculus = null;
+            Calculus calculus = new Calculus(1, 2);
 
             // Send the information back to the client
             Integer result = null;
