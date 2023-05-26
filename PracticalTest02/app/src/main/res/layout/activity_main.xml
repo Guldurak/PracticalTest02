@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:text="@string/server"/>
+        android:text="server"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:id="@+id/server_port_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/server_port"/>
+                android:hint="server_port"/>
 
         </ScrollView>
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/connect"/>
+                android:text="connect"/>
 
         </ScrollView>
 
@@ -59,7 +59,7 @@
         android:layout_gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:text="@string/client"/>
+        android:text="client"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 android:id="@+id/client_address_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/client_address"/>
+                android:hint="client_address"/>
 
         </ScrollView>
 
@@ -88,7 +88,7 @@
                 android:id="@+id/client_port_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/client_port"/>
+                android:hint="client_port"/>
 
         </ScrollView>
 
@@ -105,24 +105,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
-            android:hint="@string/city"
+            android:hint="city"
             android:layout_row="0"
             android:layout_column="0"/>
-
-        <Spinner
-            android:id="@+id/information_type_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/information_types"
-            android:layout_row="1"
-            android:layout_column="0"/>
-
         <Button
             android:id="@+id/get_weather_forecast_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/get_weather_forecast"
+            android:text="get_weather_forecast"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="1"/>

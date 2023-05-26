@@ -94,7 +94,6 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
         clientAddressEditText = findViewById(R.id.client_address_edit_text);
         clientPortEditText = findViewById(R.id.client_port_edit_text);
         cityEditText = findViewById(R.id.city_edit_text);
-        informationTypeSpinner = findViewById(R.id.information_type_spinner);
         Button getWeatherForecastButton = findViewById(R.id.get_weather_forecast_button);
         getWeatherForecastButton.setOnClickListener(getWeatherForecastButtonClickListener);
         weatherForecastTextView = findViewById(R.id.weather_forecast_text_view);
