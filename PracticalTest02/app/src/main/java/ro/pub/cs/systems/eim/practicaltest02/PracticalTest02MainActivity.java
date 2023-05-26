@@ -74,18 +74,18 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
             String operator_1 = operator1EditText.getText().toString();
             String operator_2 = operator2EditText.getText().toString();
 
-            String informationType = informationTypeSpinner.getSelectedItem().toString();
-            if (operator_1.isEmpty() || informationType.isEmpty()) {
+//            String informationType = informationTypeSpinner.getSelectedItem().toString();
+            if (operator_1.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Parameters from client (operator1 / information type) should be filled", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            if (operator_2.isEmpty() || informationType.isEmpty()) {
+            if (operator_2.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Parameters from client (operator2 / information type) should be filled", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            ClientThread clientThread = new ClientThread(clientAddress, Integer.parseInt(clientPort), operator_1, operator_2, informationType, weatherForecastTextView);
+            ClientThread clientThread = new ClientThread(clientAddress, Integer.parseInt(clientPort), operator_1, operator_2, weatherForecastTextView);
             clientThread.start();
         }
     }
@@ -113,18 +113,17 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
             String operator_1 = operator1EditText.getText().toString();
             String operator_2 = operator2EditText.getText().toString();
 
-            String informationType = informationTypeSpinner.getSelectedItem().toString();
-            if (operator_1.isEmpty() || informationType.isEmpty()) {
+            if (operator_1.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Parameters from client (operator1 / information type) should be filled", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            if (operator_2.isEmpty() || informationType.isEmpty()) {
+            if (operator_2.isEmpty()) {
                 Toast.makeText(getApplicationContext(), "[MAIN ACTIVITY] Parameters from client (operator2 / information type) should be filled", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            ClientThread clientThread = new ClientThread(clientAddress, Integer.parseInt(clientPort), operator_1, operator_2, informationType, weatherForecastTextView);
+            ClientThread clientThread = new ClientThread(clientAddress, Integer.parseInt(clientPort), operator_1, operator_2, weatherForecastTextView);
             clientThread.start();
         }
     }

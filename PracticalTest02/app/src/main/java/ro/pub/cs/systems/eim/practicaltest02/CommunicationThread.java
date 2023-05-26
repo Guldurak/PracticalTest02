@@ -52,13 +52,13 @@ public class CommunicationThread extends Thread {
             String operator_1 = bufferedReader.readLine();
             String operator_2 = bufferedReader.readLine();
 
-            String informationType = bufferedReader.readLine();
-            if (operator_1 == null || operator_1.isEmpty() || informationType == null || informationType.isEmpty()) {
+            //String informationType = bufferedReader.readLine();
+            if (operator_1 == null || operator_1.isEmpty()) {
                 Log.e(Constants.TAG, "[COMMUNICATION THREAD] Error receiving parameters from client (operator_1 / information type!");
                 return;
             }
 
-            if (operator_2 == null || operator_2.isEmpty() || informationType == null || informationType.isEmpty()) {
+            if (operator_2 == null || operator_2.isEmpty()) {
                 Log.e(Constants.TAG, "[COMMUNICATION THREAD] Error receiving parameters from client (operator_2 / information type!");
                 return;
             }
@@ -67,18 +67,22 @@ public class CommunicationThread extends Thread {
 
             // Send the information back to the client
             Integer result = null;
-            switch (informationType) {
-                case Constants.ADD:
+            //switch (informationType) {
+                //case Constants.ADD:
                     result = calculus.getAdd();
-                    break;
-                case Constants.MUL:
+                    Log.i(Constants.TAG, "rezultat" + result);
+                    printWriter.flush();
+                    //break;
+                //case Constants.MUL:
                     result = calculus.getMul();
-                    break;
-                default:
-                    Log.i(Constants.TAG, "[COMMUNICATION THREAD] Wrong information type (all / add / mul)!");
-            }
+                    Log.i(Constants.TAG, "rezultat" + result);
+                    printWriter.flush();
+                    //break;
+                //default:
+                    //Log.i(Constants.TAG, "[COMMUNICATION THREAD] Wrong information type (all / add / mul)!");
+            //}
             // Send the result back to the client
-            printWriter.println(result.toString());
+            Log.i(Constants.TAG, "rezultat" + result);
             printWriter.flush();
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[COMMUNICATION THREAD] An exception has occurred: " + ioException.getMessage());
