@@ -66,7 +66,7 @@ public class CommunicationThread extends Thread {
             Calculus calculus = null;
 
             // Send the information back to the client
-            Integer result;
+            Integer result = null;
             switch (informationType) {
                 case Constants.ADD:
                     result = calculus.getAdd();
@@ -78,7 +78,7 @@ public class CommunicationThread extends Thread {
                     Log.i(Constants.TAG, "[COMMUNICATION THREAD] Wrong information type (all / add / mul)!");
             }
             // Send the result back to the client
-            printWriter.println(result);
+            printWriter.println(result.toString());
             printWriter.flush();
         } catch (IOException ioException) {
             Log.e(Constants.TAG, "[COMMUNICATION THREAD] An exception has occurred: " + ioException.getMessage());
