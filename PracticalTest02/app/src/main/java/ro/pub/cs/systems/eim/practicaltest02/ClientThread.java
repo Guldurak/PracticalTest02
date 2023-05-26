@@ -13,16 +13,19 @@ public class ClientThread extends Thread {
 
     private final String address;
     private final int port;
-    private final String city;
+//    private final String city;
+    private final String operator_1;
+    private final String operator_2;
     private final String informationType;
     private final TextView weatherForecastTextView;
 
     private Socket socket;
 
-    public ClientThread(String address, int port, String city, String informationType, TextView weatherForecastTextView) {
+    public ClientThread(String address, int port, String operator_1, String operator_2, String informationType, TextView weatherForecastTextView) {
         this.address = address;
         this.port = port;
-        this.city = city;
+        this.operator_1 = operator_1;
+        this.operator_2 = operator_2;
         this.informationType = informationType;
         this.weatherForecastTextView = weatherForecastTextView;
     }
@@ -37,8 +40,10 @@ public class ClientThread extends Thread {
             BufferedReader bufferedReader = Utilities.getReader(socket);
             PrintWriter printWriter = Utilities.getWriter(socket);
 
-            // sends the city and information type to the server
-            printWriter.println(city);
+            // sends the operators and information type to the server
+            printWriter.println(operator_1);
+            printWriter.flush();
+            printWriter.println(operator_2);
             printWriter.flush();
             printWriter.println(informationType);
             printWriter.flush();
