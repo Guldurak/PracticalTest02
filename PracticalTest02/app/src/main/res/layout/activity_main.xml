@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ro.pub.cs.systems.eim.practicaltest02.view.PracticalTest02MainActivity">
+    tools:context=".PracticalTest02MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:text="@string/server"/>
+        android:text="Server"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:id="@+id/server_port_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/server_port"/>
+                android:hint="Server_port"/>
 
         </ScrollView>
 
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/connect"/>
+                android:text="Connect"/>
 
         </ScrollView>
 
@@ -59,7 +59,7 @@
         android:layout_gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:text="@string/client"/>
+        android:text="Client"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
                 android:id="@+id/client_address_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/client_address"/>
+                android:hint="Client_address"/>
 
         </ScrollView>
 
@@ -88,7 +88,7 @@
                 android:id="@+id/client_port_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/client_port"/>
+                android:hint="Client_port"/>
 
         </ScrollView>
 
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
-            android:hint="@string/city"
+            android:hint="City"
             android:layout_row="0"
             android:layout_column="0"/>
 
@@ -113,7 +113,7 @@
             android:id="@+id/information_type_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/information_types"
+            android:entries="Information_types"
             android:layout_row="1"
             android:layout_column="0"/>
 
@@ -122,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/get_weather_forecast"
+            android:text="Get weather forecast"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="1"/>
