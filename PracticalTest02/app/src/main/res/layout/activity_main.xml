@@ -101,22 +101,40 @@
         android:columnCount="2">
 
         <EditText
-            android:id="@+id/city_edit_text"
+            android:id="@+id/operator_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="5"
-            android:hint="city"
+            android:hint="Operator 1"
             android:layout_row="0"
             android:layout_column="0"/>
+
+        <EditText
+            android:id="@+id/operator_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:hint="Operator 2"
+            android:layout_row="0"/>
+       
         <Button
-            android:id="@+id/get_weather_forecast_button"
+            android:id="@+id/add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="get_weather_forecast"
+            android:text="Add"
             android:layout_row="0"
             android:layout_rowSpan="2"
             android:layout_column="1"/>
+
+        <Button
+            android:id="@+id/mul_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowSpan="2"
+            android:layout_gravity="center"
+            android:text="Mul" />
 
     </GridLayout>
 
